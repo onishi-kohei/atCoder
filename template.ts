@@ -1,32 +1,32 @@
 import * as fs from 'fs';
 const to = (str: any) => console.log(str);
 class Input {
-    private idx: number;
-    private arr: string[];
+    private _idx: number;
+    private _arr: string[];
 
     constructor(text: string) {
-        this.idx = 0;
-        this.arr = text.split(/\s/);
+        this._idx = 0;
+        this._arr = text.split(/\s/);
     }
 
-    word = () => this.arr[this.idx++];
+    word = () => this._arr[this._idx++];
     words = (n: number) => {
-        const ret = this.arr.slice(this.idx, this.idx + n);
-        this.idx += n;
+        const ret = this._arr.slice(this._idx, this._idx + n);
+        this._idx += n;
         return ret;
     };
 
-    number = () => Number(this.arr[this.idx++]);
+    number = () => Number(this._arr[this._idx++]);
     numbers = (n: number) => {
-        const ret = this.arr.slice(this.idx, this.idx + n).map(s => +s);
-        this.idx += n;
+        const ret = this._arr.slice(this._idx, this._idx + n).map(s => +s);
+        this._idx += n;
         return ret;
     };
 
-    bigint = () => BigInt(this.arr[this.idx++]);
+    bigint = () => BigInt(this._arr[this._idx++]);
     bigints = (n: number) => {
-        const ret = this.arr.slice(this.idx, this.idx + n).map(BigInt);
-        this.idx += n;
+        const ret = this._arr.slice(this._idx, this._idx + n).map(BigInt);
+        this._idx += n;
         return ret;
     };
 }
