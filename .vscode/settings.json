@@ -5,5 +5,9 @@
     "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
-    }
+    },
+    "code-runner.executorMap": {
+        "javascript": "clear; node",
+        "typescript": "clear; ts-node"
+    },
 }
