@@ -11,23 +11,23 @@ class Input {
 
     word = () => this.arr[this.idx++];
     words = (n: number) => {
-        const ret = this.arr.slice(this.idx, this.idx + n);
+        const res = this.arr.slice(this.idx, this.idx + n);
         this.idx += n;
-        return ret;
+        return res;
     };
 
     number = () => Number(this.arr[this.idx++]);
     numbers = (n: number) => {
-        const ret = this.arr.slice(this.idx, this.idx + n).map(s => +s);
+        const res = this.arr.slice(this.idx, this.idx + n).map(s => +s);
         this.idx += n;
-        return ret;
+        return res;
     };
 
     bigint = () => BigInt(this.arr[this.idx++]);
     bigints = (n: number) => {
-        const ret = this.arr.slice(this.idx, this.idx + n).map(BigInt);
+        const res = this.arr.slice(this.idx, this.idx + n).map(BigInt);
         this.idx += n;
-        return ret;
+        return res;
     };
 }
 
