@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^15.12.0",
+    "es2020": "^1.1.9",
     "ts-node": "^10.2.1"
   },
   "devDependencies": {
@@ -24,6 +25,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "prettier": "^2.3.0",
-    "typescript": "^2.9.2"
+    "typescript": "^4.4.3"
   }
 }
